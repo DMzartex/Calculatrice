@@ -1,0 +1,8 @@
+
+<?php  if($operation->getErrors() == true): ?>
+
+<div class="alert alert-danger">
+    Ce n'est pas possible de diviser par 0 !
+</div>
+
+<?php endif; ?>
