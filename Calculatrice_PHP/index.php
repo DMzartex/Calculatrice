@@ -30,6 +30,15 @@ if(!empty($_POST['nombre_1']) && !empty($_POST['nombre_2']) && !empty($_POST['op
 
 <div class="container">
 
+<?php if(isset($choix)): ?>
+    <?php  if($operation->getErrors() == true): ?>
+
+    <div class="alert alert-danger">
+        Ce n'est pas possible de diviser par 0 !
+    </div>
+
+    <?php endif; ?>
+<?php endif ?>
     <form action="index.php" method="post">
         <div class="form-group">
             <input type="number" step="any" class="form-control" placeholder="Votre premier nombre :" name="nombre_1">
